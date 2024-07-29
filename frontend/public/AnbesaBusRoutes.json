@@ -329,9 +329,10 @@
       },
       "properties": {
         "FID": 0,
-        "DIGI_STATU": "14",
         "DIGI_TEAM": " 3",
-        "DURATION": "272"
+        "DURATION": "272",
+        "Route_No": 14,
+        "Route_Name": "SARIS ABO - MENELIK   SQUAR"
       }
     },
     {
@@ -740,9 +741,10 @@
       },
       "properties": {
         "FID": 1,
-        "DIGI_STATU": "106",
         "DIGI_TEAM": "3",
-        "DURATION": "5528"
+        "DURATION": "5528",
+        "Route_No": 106,
+        "Route_Name": "GORO ADEBABAY - SAMMIT MEGENAGNA"
       }
     },
     {
@@ -1057,9 +1059,10 @@
       },
       "properties": {
         "FID": 2,
-        "DIGI_STATU": "9",
         "DIGI_TEAM": "2",
-        "DURATION": "120"
+        "DURATION": "120",
+        "Route_No": 9,
+        "Route_Name": "BOLE BRASS CLINIC - PIASSA"
       }
     },
     {
@@ -1427,9 +1430,10 @@
       },
       "properties": {
         "FID": 3,
-        "DIGI_STATU": "12",
         "DIGI_TEAM": "6",
-        "DURATION": "3782"
+        "DURATION": "3782",
+        "Route_No": 12,
+        "Route_Name": "GURARA FERENSAY KELA - ADDIS KETEMA"
       }
     },
     {
@@ -1850,9 +1854,10 @@
       },
       "properties": {
         "FID": 4,
-        "DIGI_STATU": "10",
         "DIGI_TEAM": "5",
-        "DURATION": "4889"
+        "DURATION": "4889",
+        "Route_No": 10,
+        "Route_Name": "KOTEBE  COLLEGE - PIASSA"
       }
     },
     {
@@ -2195,9 +2200,10 @@
       },
       "properties": {
         "FID": 5,
-        "DIGI_STATU": "1",
         "DIGI_TEAM": "4",
-        "DURATION": "1337"
+        "DURATION": "1337",
+        "Route_No": 1,
+        "Route_Name": "MEGENAGNA  - KARALO"
       }
     },
     {
@@ -2808,9 +2814,10 @@
       },
       "properties": {
         "FID": 6,
-        "DIGI_STATU": "4",
         "DIGI_TEAM": "4",
-        "DURATION": "992"
+        "DURATION": "992",
+        "Route_No": 4,
+        "Route_Name": "KALITI - ADDIS  KETEMA"
       }
     },
     {
@@ -3143,9 +3150,10 @@
       },
       "properties": {
         "FID": 7,
-        "DIGI_STATU": "6",
         "DIGI_TEAM": " 8",
-        "DURATION": "3836"
+        "DURATION": "3836",
+        "Route_No": 6,
+        "Route_Name": "KERA - SEMEN  GEBEYA  SQUAR"
       }
     },
     {
@@ -3456,9 +3464,10 @@
       },
       "properties": {
         "FID": 8,
-        "DIGI_STATU": "21",
         "DIGI_TEAM": "6",
-        "DURATION": " 1408"
+        "DURATION": " 1408",
+        "Route_No": 21,
+        "Route_Name": "FELIDORO - ADDIS  KETEMA"
       }
     },
     {
@@ -3807,9 +3816,10 @@
       },
       "properties": {
         "FID": 9,
-        "DIGI_STATU": "17",
         "DIGI_TEAM": "4",
-        "DURATION": "1541"
+        "DURATION": "1541",
+        "Route_No": 17,
+        "Route_Name": "KUSQUM  - ADDIS  KETEMA"
       }
     },
     {
@@ -4182,9 +4192,10 @@
       },
       "properties": {
         "FID": 10,
-        "DIGI_STATU": "18",
         "DIGI_TEAM": "6",
-        "DURATION": "756"
+        "DURATION": "756",
+        "Route_No": 18,
+        "Route_Name": "KERANIYO - ADDIS  KETEMA"
       }
     },
     {
@@ -4421,9 +4432,10 @@
       },
       "properties": {
         "FID": 11,
-        "DIGI_STATU": "119",
         "DIGI_TEAM": "4",
-        "DURATION": "2110"
+        "DURATION": "2110",
+        "Route_No": 119,
+        "Route_Name": "MEGENAGNA  - SUMMIT CONDIMINNIUM"
       }
     },
     {
@@ -4833,9 +4845,10 @@
       },
       "properties": {
         "FID": 12,
-        "DIGI_STATU": "15",
         "DIGI_TEAM": "4",
-        "DURATION": "1640"
+        "DURATION": "1640",
+        "Route_No": 15,
+        "Route_Name": "MEGENAGNA - ADDIS KETEMA"
       }
     },
     {
@@ -5416,9 +5429,10 @@
       },
       "properties": {
         "FID": 13,
-        "DIGI_STATU": "22",
         "DIGI_TEAM": "6",
-        "DURATION": "1433"
+        "DURATION": "1433",
+        "Route_No": 22,
+        "Route_Name": "SUMMIT - LEGEHAR"
       }
     },
     {
@@ -5973,9 +5987,10 @@
       },
       "properties": {
         "FID": 14,
-        "DIGI_STATU": "28",
         "DIGI_TEAM": "3",
-        "DURATION": "1735"
+        "DURATION": "1735",
+        "Route_No": 28,
+        "Route_Name": "ASKO SANSUZI -ADDIS  KETEMA"
       }
     },
     {
@@ -6351,9 +6366,10 @@
       },
       "properties": {
         "FID": 15,
-        "DIGI_STATU": "32",
         "DIGI_TEAM": "6",
-        "DURATION": "903"
+        "DURATION": "903",
+        "Route_No": 32,
+        "Route_Name": "HANA MARIAM -LEGEHAR"
       }
     },
     {
@@ -6755,9 +6771,10 @@
       },
       "properties": {
         "FID": 16,
-        "DIGI_STATU": "29",
         "DIGI_TEAM": "4",
-        "DURATION": "520"
+        "DURATION": "520",
+        "Route_No": 29,
+        "Route_Name": "SARIS  ADDISU SEFER - ADDIS KETEMA"
       }
     },
     {
@@ -7164,9 +7181,10 @@
       },
       "properties": {
         "FID": 17,
-        "DIGI_STATU": "27",
         "DIGI_TEAM": "3",
-        "DURATION": "123"
+        "DURATION": "123",
+        "Route_No": 27,
+        "Route_Name": "LEGEHAR - KALITI"
       }
     },
     {
@@ -7941,9 +7959,10 @@
       },
       "properties": {
         "FID": 18,
-        "DIGI_STATU": "30",
         "DIGI_TEAM": "2",
-        "DURATION": "2054"
+        "DURATION": "2054",
+        "Route_No": 30,
+        "Route_Name": "SULULTA -ADDIS KETEMA"
       }
     },
     {
@@ -8175,9 +8194,10 @@
       },
       "properties": {
         "FID": 19,
-        "DIGI_STATU": "31",
         "DIGI_TEAM": "5",
-        "DURATION": "3676"
+        "DURATION": "3676",
+        "Route_No": 31,
+        "Route_Name": "LEGEHAR  -SHIRO  MEDA"
       }
     },
     {
@@ -8658,9 +8678,10 @@
       },
       "properties": {
         "FID": 20,
-        "DIGI_STATU": "25",
         "DIGI_TEAM": "3",
-        "DURATION": "940"
+        "DURATION": "940",
+        "Route_No": 25,
+        "Route_Name": "LEGEHAR - AKAKI"
       }
     },
     {
@@ -9113,9 +9134,10 @@
       },
       "properties": {
         "FID": 21,
-        "DIGI_STATU": "39",
         "DIGI_TEAM": "3",
-        "DURATION": " 545"
+        "DURATION": " 545",
+        "Route_No": 39,
+        "Route_Name": "BOLE  SCHOOL - ADDIS  KETEMA"
       }
     },
     {
@@ -9502,9 +9524,10 @@
       },
       "properties": {
         "FID": 22,
-        "DIGI_STATU": "37",
         "DIGI_TEAM": "3",
-        "DURATION": "854"
+        "DURATION": "854",
+        "Route_No": 37,
+        "Route_Name": "KERANIYO  - MENELIK  SQUAR"
       }
     },
     {
@@ -9851,9 +9874,10 @@
       },
       "properties": {
         "FID": 23,
-        "DIGI_STATU": "41",
         "DIGI_TEAM": "4",
-        "DURATION": "509"
+        "DURATION": "509",
+        "Route_No": 41,
+        "Route_Name": "EYESUS  - ADDIS KETEMA"
       }
     },
     {
@@ -10209,9 +10233,10 @@
       },
       "properties": {
         "FID": 24,
-        "DIGI_STATU": "47",
         "DIGI_TEAM": "2",
-        "DURATION": "344"
+        "DURATION": "344",
+        "Route_No": 47,
+        "Route_Name": "YENEGEW  FIRE SCHOOL - ADDIS KETEMA"
       }
     },
     {
@@ -10578,9 +10603,10 @@
       },
       "properties": {
         "FID": 25,
-        "DIGI_STATU": "36",
         "DIGI_TEAM": "3",
-        "DURATION": "1339"
+        "DURATION": "1339",
+        "Route_No": 36,
+        "Route_Name": "KARA KORE - LEGEHAR"
       }
     },
     {
@@ -10982,9 +11008,10 @@
       },
       "properties": {
         "FID": 26,
-        "DIGI_STATU": "38",
         "DIGI_TEAM": "3",
-        "DURATION": "712"
+        "DURATION": "712",
+        "Route_No": 38,
+        "Route_Name": "GERMAN  SQUAR - SIDIST  KILO"
       }
     },
     {
@@ -11320,9 +11347,10 @@
       },
       "properties": {
         "FID": 27,
-        "DIGI_STATU": "48",
         "DIGI_TEAM": "3",
-        "DURATION": " 681"
+        "DURATION": " 681",
+        "Route_No": 48,
+        "Route_Name": "BOLE MICHAEL - MENELIK SQ;"
       }
     },
     {
@@ -11652,9 +11680,10 @@
       },
       "properties": {
         "FID": 28,
-        "DIGI_STATU": "33",
         "DIGI_TEAM": "5",
-        "DURATION": "1815"
+        "DURATION": "1815",
+        "Route_No": 33,
+        "Route_Name": "KOTEBE GEBRIEL - ARAT KILO"
       }
     },
     {
@@ -11912,9 +11941,10 @@
       },
       "properties": {
         "FID": 29,
-        "DIGI_STATU": "49",
         "DIGI_TEAM": "4",
-        "DURATION": "3206"
+        "DURATION": "3206",
+        "Route_No": 49,
+        "Route_Name": "CHEFE AYATE; - MEGENAGNA"
       }
     },
     {
@@ -12240,9 +12270,10 @@
       },
       "properties": {
         "FID": 30,
-        "DIGI_STATU": "45",
         "DIGI_TEAM": "4",
-        "DURATION": "1065"
+        "DURATION": "1065",
+        "Route_No": 45,
+        "Route_Name": "LEGEHAR - DIL BER"
       }
     },
     {
@@ -12625,9 +12656,10 @@
       },
       "properties": {
         "FID": 31,
-        "DIGI_STATU": "34",
         "DIGI_TEAM": "2",
-        "DURATION": "539"
+        "DURATION": "539",
+        "Route_No": 34,
+        "Route_Name": "GERMAN  SQUAR   - ADDIS  KETEMA"
       }
     },
     {
@@ -12979,9 +13011,10 @@
       },
       "properties": {
         "FID": 32,
-        "DIGI_STATU": "56",
         "DIGI_TEAM": "4",
-        "DURATION": "338"
+        "DURATION": "338",
+        "Route_No": 56,
+        "Route_Name": "SARIS  ABO - SHIRO MEDA"
       }
     },
     {
@@ -13326,9 +13359,10 @@
       },
       "properties": {
         "FID": 33,
-        "DIGI_STATU": "64",
         "DIGI_TEAM": "2",
-        "DURATION": "3180"
+        "DURATION": "3180",
+        "Route_No": 64,
+        "Route_Name": "SIDIST KILO - MEGENAGNA GORF ASWEGAJ"
       }
     },
     {
@@ -13934,9 +13968,10 @@
       },
       "properties": {
         "FID": 34,
-        "DIGI_STATU": "62",
         "DIGI_TEAM": "3",
-        "DURATION": "1890"
+        "DURATION": "1890",
+        "Route_No": 62,
+        "Route_Name": "SEBETA - LEGEHAR"
       }
     },
     {
@@ -14404,9 +14439,10 @@
       },
       "properties": {
         "FID": 35,
-        "DIGI_STATU": "57",
         "DIGI_TEAM": "4",
-        "DURATION": "834"
+        "DURATION": "834",
+        "Route_No": 57,
+        "Route_Name": "KARA - LEGEHAR"
       }
     },
     {
@@ -14788,9 +14824,10 @@
       },
       "properties": {
         "FID": 36,
-        "DIGI_STATU": "55",
         "DIGI_TEAM": "4",
-        "DURATION": "1823"
+        "DURATION": "1823",
+        "Route_No": 55,
+        "Route_Name": "LEGEHAR - GURARA  FERENSAY  KELLA"
       }
     },
     {
@@ -15234,9 +15271,10 @@
       },
       "properties": {
         "FID": 37,
-        "DIGI_STATU": "61",
         "DIGI_TEAM": "4",
-        "DURATION": "1738"
+        "DURATION": "1738",
+        "Route_No": 61,
+        "Route_Name": "CHEFE AYATE - LEGEHAR"
       }
     },
     {
@@ -15619,9 +15657,10 @@
       },
       "properties": {
         "FID": 38,
-        "DIGI_STATU": "66",
         "DIGI_TEAM": "4",
-        "DURATION": "1070"
+        "DURATION": "1070",
+        "Route_No": 66,
+        "Route_Name": "ADDIS KETEMA - KARA QORRE"
       }
     },
     {
@@ -16003,9 +16042,10 @@
       },
       "properties": {
         "FID": 39,
-        "DIGI_STATU": "65",
         "DIGI_TEAM": "4",
-        "DURATION": "26407"
+        "DURATION": "26407",
+        "Route_No": 65,
+        "Route_Name": "ADDIS KETEMA - ALEM  BANK"
       }
     },
     {
@@ -16396,9 +16436,10 @@
       },
       "properties": {
         "FID": 40,
-        "DIGI_STATU": "58",
         "DIGI_TEAM": "4",
-        "DURATION": "1043"
+        "DURATION": "1043",
+        "Route_No": 58,
+        "Route_Name": "LEGEHALR - ALEM  BANK"
       }
     },
     {
@@ -16780,9 +16821,10 @@
       },
       "properties": {
         "FID": 41,
-        "DIGI_STATU": "67",
         "DIGI_TEAM": "6",
-        "DURATION": "3227"
+        "DURATION": "3227",
+        "Route_No": 67,
+        "Route_Name": "LEGEHAR - JEMMO  MEKANISSA"
       }
     },
     {
@@ -17000,9 +17042,10 @@
       },
       "properties": {
         "FID": 42,
-        "DIGI_STATU": "77",
         "DIGI_TEAM": "3",
-        "DURATION": "2816"
+        "DURATION": "2816",
+        "Route_No": 77,
+        "Route_Name": "AYER TENA - KERA"
       }
     },
     {
@@ -17374,9 +17417,10 @@
       },
       "properties": {
         "FID": 43,
-        "DIGI_STATU": "68",
         "DIGI_TEAM": "2",
-        "DURATION": "681"
+        "DURATION": "681",
+        "Route_No": 68,
+        "Route_Name": "MENELIK HOSPITAL - TORE HAILOCH"
       }
     },
     {
@@ -17803,9 +17847,10 @@
       },
       "properties": {
         "FID": 44,
-        "DIGI_STATU": "71",
         "DIGI_TEAM": "3",
-        "DURATION": "1837"
+        "DURATION": "1837",
+        "Route_No": 71,
+        "Route_Name": "GERJI - BALCHA  HOSPITAL"
       }
     },
     {
@@ -18313,9 +18358,10 @@
       },
       "properties": {
         "FID": 45,
-        "DIGI_STATU": "76",
         "DIGI_TEAM": "3",
-        "DURATION": "829"
+        "DURATION": "829",
+        "Route_No": 76,
+        "Route_Name": "MEGENAGNA - KALITI"
       }
     },
     {
@@ -18554,9 +18600,10 @@
       },
       "properties": {
         "FID": 46,
-        "DIGI_STATU": "69",
         "DIGI_TEAM": "4",
-        "DURATION": "140???"
+        "DURATION": "140???",
+        "Route_No": 69,
+        "Route_Name": "LOME  MEDA  - MERKATO"
       }
     },
     {
@@ -18970,9 +19017,10 @@
       },
       "properties": {
         "FID": 47,
-        "DIGI_STATU": "70",
         "DIGI_TEAM": "3",
-        "DURATION": "861"
+        "DURATION": "861",
+        "Route_No": 70,
+        "Route_Name": "AWARE  SQUARE - AYER TENA"
       }
     },
     {
@@ -19669,9 +19717,10 @@
       },
       "properties": {
         "FID": 48,
-        "DIGI_STATU": "74",
         "DIGI_TEAM": "4",
-        "DURATION": "652"
+        "DURATION": "652",
+        "Route_No": 74,
+        "Route_Name": "CMC SQUARE - ADDIS  KETEMA"
       }
     },
     {
@@ -20020,9 +20069,10 @@
       },
       "properties": {
         "FID": 49,
-        "DIGI_STATU": "87",
         "DIGI_TEAM": "2",
-        "DURATION": "5167"
+        "DURATION": "5167",
+        "Route_No": 87,
+        "Route_Name": "WINGET VIS RING ROAD- AYER TENA"
       }
     },
     {
@@ -20681,9 +20731,10 @@
       },
       "properties": {
         "FID": 50,
-        "DIGI_STATU": "91",
         "DIGI_TEAM": "2",
-        "DURATION": "1054"
+        "DURATION": "1054",
+        "Route_No": 91,
+        "Route_Name": "ADDIS KETEMA - TEJI"
       }
     },
     {
@@ -21486,9 +21537,10 @@
       },
       "properties": {
         "FID": 51,
-        "DIGI_STATU": "89",
         "DIGI_TEAM": "5",
-        "DURATION": "1740"
+        "DURATION": "1740",
+        "Route_No": 89,
+        "Route_Name": "ADDIS KETEMA -SENDAFA"
       }
     },
     {
@@ -21970,9 +22022,10 @@
       },
       "properties": {
         "FID": 52,
-        "DIGI_STATU": "79",
         "DIGI_TEAM": "4",
-        "DURATION": "1298"
+        "DURATION": "1298",
+        "Route_No": 79,
+        "Route_Name": "ARAT KILO - SEMIT CONDIMINIUM"
       }
     },
     {
@@ -22370,9 +22423,10 @@
       },
       "properties": {
         "FID": 53,
-        "DIGI_STATU": "82",
         "DIGI_TEAM": "3",
-        "DURATION": "930"
+        "DURATION": "930",
+        "Route_No": 82,
+        "Route_Name": "GORO ADEBABAY - BALCHA HOSPITAL"
       }
     },
     {
@@ -22829,9 +22883,10 @@
       },
       "properties": {
         "FID": 54,
-        "DIGI_STATU": "83",
         "DIGI_TEAM": "2",
-        "DURATION": "1926"
+        "DURATION": "1926",
+        "Route_No": 83,
+        "Route_Name": "CHEFE AYATE - SIDIST KILO"
       }
     },
     {
@@ -23229,9 +23284,10 @@
       },
       "properties": {
         "FID": 55,
-        "DIGI_STATU": "90",
         "DIGI_TEAM": "4",
-        "DURATION": "1130"
+        "DURATION": "1130",
+        "Route_No": 90,
+        "Route_Name": "BETEL HOSPITAL - LEGEHAR"
       }
     },
     {
@@ -23675,9 +23731,10 @@
       },
       "properties": {
         "FID": 56,
-        "DIGI_STATU": "92",
         "DIGI_TEAM": "3",
-        "DURATION": "1989"
+        "DURATION": "1989",
+        "Route_No": 92,
+        "Route_Name": "HANA MARIAM RING ROAD- BALCHA"
       }
     },
     {
@@ -24016,9 +24073,10 @@
       },
       "properties": {
         "FID": 57,
-        "DIGI_STATU": "100",
         "DIGI_TEAM": "4",
-        "DURATION": "1636"
+        "DURATION": "1636",
+        "Route_No": 100,
+        "Route_Name": "ADDIS KETEMA - JEMO"
       }
     },
     {
@@ -24488,9 +24546,10 @@
       },
       "properties": {
         "FID": 58,
-        "DIGI_STATU": "94",
         "DIGI_TEAM": "6",
-        "DURATION": "455"
+        "DURATION": "455",
+        "Route_No": 94,
+        "Route_Name": "PIASSA  - MIKILILAND"
       }
     },
     {
@@ -24790,9 +24849,10 @@
       },
       "properties": {
         "FID": 59,
-        "DIGI_STATU": "97",
         "DIGI_TEAM": "3",
-        "DURATION": "1761"
+        "DURATION": "1761",
+        "Route_No": 97,
+        "Route_Name": "MEGENAGNA - LEGETAFO MISSION"
       }
     },
     {
@@ -25238,9 +25298,10 @@
       },
       "properties": {
         "FID": 60,
-        "DIGI_STATU": "102",
         "DIGI_TEAM": "4",
-        "DURATION": "1040"
+        "DURATION": "1040",
+        "Route_No": 102,
+        "Route_Name": "KARA    - LEGEHAR"
       }
     },
     {
@@ -25510,9 +25571,10 @@
       },
       "properties": {
         "FID": 61,
-        "DIGI_STATU": "101",
         "DIGI_TEAM": "3",
-        "DURATION": "3197"
+        "DURATION": "3197",
+        "Route_No": 101,
+        "Route_Name": "MEGENAGNA - ABA KIRROS  Sq."
       }
     },
     {
@@ -25779,9 +25841,10 @@
       },
       "properties": {
         "FID": 62,
-        "DIGI_STATU": "99",
         "DIGI_TEAM": "2",
-        "DURATION": "1118"
+        "DURATION": "1118",
+        "Route_No": 99,
+        "Route_Name": "AYER  TENA - ALEM  GENA MICHAEL"
       }
     },
     {
@@ -26114,9 +26177,10 @@
       },
       "properties": {
         "FID": 63,
-        "DIGI_STATU": "117",
         "DIGI_TEAM": "3",
-        "DURATION": "858"
+        "DURATION": "858",
+        "Route_No": 117,
+        "Route_Name": "KOTARI CoNDIMINNIUM - MEXICO SQUARE"
       }
     },
     {
@@ -26427,9 +26491,10 @@
       },
       "properties": {
         "FID": 64,
-        "DIGI_STATU": "109",
         "DIGI_TEAM": "4",
-        "DURATION": "2189"
+        "DURATION": "2189",
+        "Route_No": 109,
+        "Route_Name": "SARIS ABO - TULU DIMETU SQUARE"
       }
     },
     {
@@ -26680,9 +26745,10 @@
       },
       "properties": {
         "FID": 65,
-        "DIGI_STATU": "104",
         "DIGI_TEAM": "2",
-        "DURATION": "633"
+        "DURATION": "633",
+        "Route_No": 104,
+        "Route_Name": "WERKU  SEFER  - KERA"
       }
     },
     {
@@ -26978,9 +27044,10 @@
       },
       "properties": {
         "FID": 66,
-        "DIGI_STATU": "121",
         "DIGI_TEAM": "4",
-        "DURATION": "1386"
+        "DURATION": "1386",
+        "Route_No": 121,
+        "Route_Name": "JEMO QEDUS GEBREAL - MEXICO SQUARE"
       }
     },
     {
@@ -27301,9 +27368,10 @@
       },
       "properties": {
         "FID": 67,
-        "DIGI_STATU": "123",
         "DIGI_TEAM": "4",
-        "DURATION": "1260"
+        "DURATION": "1260",
+        "Route_No": 123,
+        "Route_Name": "MEGENAGNA - YEKA ABADO"
       }
     },
     {
@@ -28016,9 +28084,10 @@
       },
       "properties": {
         "FID": 68,
-        "DIGI_STATU": "110",
         "DIGI_TEAM": "4",
-        "DURATION": "1046"
+        "DURATION": "1046",
+        "Route_No": 110,
+        "Route_Name": "SIDIST  KILO -TULU DIMETU SQUARE"
       }
     },
     {
@@ -28432,9 +28501,10 @@
       },
       "properties": {
         "FID": 69,
-        "DIGI_STATU": "105",
         "DIGI_TEAM": "4",
-        "DURATION": "1041"
+        "DURATION": "1041",
+        "Route_No": 105,
+        "Route_Name": "ANFO MEDA - LEGEHAR"
       }
     },
     {
@@ -28953,9 +29023,10 @@
       },
       "properties": {
         "FID": 70,
-        "DIGI_STATU": "124",
         "DIGI_TEAM": "4",
-        "DURATION": "1336"
+        "DURATION": "1336",
+        "Route_No": 124,
+        "Route_Name": "MEGENAGNA - TULU DIMTU"
       }
     },
     {
@@ -29245,9 +29316,10 @@
       },
       "properties": {
         "FID": 71,
-        "DIGI_STATU": "50",
         "DIGI_TEAM": "3",
-        "DURATION": "4699"
+        "DURATION": "4699",
+        "Route_No": 50,
+        "Route_Name": "AYER  TENA - MEGENAGNA"
       }
     },
     {
@@ -29534,9 +29606,10 @@
       },
       "properties": {
         "FID": 72,
-        "DIGI_STATU": "112",
         "DIGI_TEAM": "6???",
-        "DURATION": "7410???"
+        "DURATION": "7410???",
+        "Route_No": 112,
+        "Route_Name": "CIRCULAR  ROUTE WITH IN  RING  ROAD 4 TURNING POINTS"
       }
     },
     {
@@ -29981,9 +30054,10 @@
       },
       "properties": {
         "FID": 73,
-        "DIGI_STATU": "114",
         "DIGI_TEAM": "5",
-        "DURATION": "3018"
+        "DURATION": "3018",
+        "Route_No": 114,
+        "Route_Name": "GELAN  CONDIMINIUM - SARIS  ABO"
       }
     },
     {
@@ -30316,9 +30390,10 @@
       },
       "properties": {
         "FID": 74,
-        "DIGI_STATU": "73",
         "DIGI_TEAM": "4",
-        "DURATION": "1988"
+        "DURATION": "1988",
+        "Route_No": 73,
+        "Route_Name": "LEGEHAR - RING  ROAD  VIS  WINGET"
       }
     },
     {
@@ -30643,9 +30718,10 @@
       },
       "properties": {
         "FID": 75,
-        "DIGI_STATU": "112",
         "DIGI_TEAM": "6???",
-        "DURATION": "7410???"
+        "DURATION": "7410???",
+        "Route_No": 112,
+        "Route_Name": "CIRCULAR  ROUTE WITH IN  RING  ROAD 4 TURNING POINTS"
       }
     },
     {
@@ -30975,9 +31051,10 @@
       },
       "properties": {
         "FID": 76,
-        "DIGI_STATU": "2",
         "DIGI_TEAM": "3",
-        "DURATION": "433"
+        "DURATION": "433",
+        "Route_No": 2,
+        "Route_Name": "KORE  MEKANISSA - ADDIS  KETEMA"
       }
     },
     {
@@ -31400,9 +31477,10 @@
       },
       "properties": {
         "FID": 77,
-        "DIGI_STATU": "3",
         "DIGI_TEAM": "8",
-        "DURATION": "4614"
+        "DURATION": "4614",
+        "Route_No": 3,
+        "Route_Name": "AYER  TENA - MENELIK   SQUAR"
       }
     },
     {
@@ -31956,9 +32034,10 @@
       },
       "properties": {
         "FID": 78,
-        "DIGI_STATU": "7",
         "DIGI_TEAM": "3",
-        "DURATION": "2012"
+        "DURATION": "2012",
+        "Route_No": 7,
+        "Route_Name": "MEGENAGNA - ALELTU"
       }
     },
     {
@@ -32341,9 +32420,10 @@
       },
       "properties": {
         "FID": 79,
-        "DIGI_STATU": "11",
         "DIGI_TEAM": "2",
-        "DURATION": "462"
+        "DURATION": "462",
+        "Route_No": 11,
+        "Route_Name": "KOLFE  EFOYETA - MENELIK HOSPITAL"
       }
     },
     {
@@ -32784,9 +32864,10 @@
       },
       "properties": {
         "FID": 80,
-        "DIGI_STATU": "13",
         "DIGI_TEAM": "3",
-        "DURATION": "155"
+        "DURATION": "155",
+        "Route_No": 13,
+        "Route_Name": "ITALY   EMBASSY - ADDIS KETEMA"
       }
     },
     {
@@ -33197,9 +33278,10 @@
       },
       "properties": {
         "FID": 81,
-        "DIGI_STATU": "16",
         "DIGI_TEAM": "6",
-        "DURATION": "1338"
+        "DURATION": "1338",
+        "Route_No": 16,
+        "Route_Name": "KIDANIMIHRET - ADDIS  KETEMA"
       }
     },
     {
@@ -33858,9 +33940,10 @@
       },
       "properties": {
         "FID": 82,
-        "DIGI_STATU": "19",
         "DIGI_TEAM": "5",
-        "DURATION": "4128"
+        "DURATION": "4128",
+        "Route_No": 19,
+        "Route_Name": "SANSUSI - PIASSA"
       }
     },
     {
@@ -34134,9 +34217,10 @@
       },
       "properties": {
         "FID": 83,
-        "DIGI_STATU": "20",
         "DIGI_TEAM": "2",
-        "DURATION": "994"
+        "DURATION": "994",
+        "Route_No": 20,
+        "Route_Name": "DIL BER  - ADDIS  KETEMA"
       }
     },
     {
@@ -34567,9 +34651,10 @@
       },
       "properties": {
         "FID": 84,
-        "DIGI_STATU": "23",
         "DIGI_TEAM": "5",
-        "DURATION": "2960"
+        "DURATION": "2960",
+        "Route_No": 23,
+        "Route_Name": "LAMBERET - ADDIS  KETEMA"
       }
     },
     {
@@ -35134,9 +35219,10 @@
       },
       "properties": {
         "FID": 85,
-        "DIGI_STATU": "24",
         "DIGI_TEAM": "4",
-        "DURATION": "1846"
+        "DURATION": "1846",
+        "Route_No": 24,
+        "Route_Name": "DIRE  SOLOLIYA -ADDIS KETEMA"
       }
     },
     {
@@ -35824,9 +35910,10 @@
       },
       "properties": {
         "FID": 86,
-        "DIGI_STATU": "26",
         "DIGI_TEAM": "4",
-        "DURATION": "656"
+        "DURATION": "656",
+        "Route_No": 26,
+        "Route_Name": "ADDIS KETEMA - SEBETA"
       }
     },
     {
@@ -36408,9 +36495,10 @@
       },
       "properties": {
         "FID": 87,
-        "DIGI_STATU": "40",
         "DIGI_TEAM": "4",
-        "DURATION": "707"
+        "DURATION": "707",
+        "Route_No": 40,
+        "Route_Name": "KARALO - ADDIS  KETEMA"
       }
     },
     {
@@ -36945,9 +37033,10 @@
       },
       "properties": {
         "FID": 88,
-        "DIGI_STATU": "43",
         "DIGI_TEAM": "2",
-        "DURATION": "752"
+        "DURATION": "752",
+        "Route_No": 43,
+        "Route_Name": "MENAGESHA - ADDIS KETEMA"
       }
     },
     {
@@ -37851,9 +37940,10 @@
       },
       "properties": {
         "FID": 89,
-        "DIGI_STATU": "44",
         "DIGI_TEAM": "2",
-        "DURATION": "2407"
+        "DURATION": "2407",
+        "Route_No": 44,
+        "Route_Name": "LEGEDADI - ADDIS  KETEMA"
       }
     },
     {
@@ -38197,9 +38287,10 @@
       },
       "properties": {
         "FID": 90,
-        "DIGI_STATU": "46",
         "DIGI_TEAM": "4",
-        "DURATION": "504"
+        "DURATION": "504",
+        "Route_No": 46,
+        "Route_Name": "GERJI  - ARAT  KILO"
       }
     },
     {
@@ -38614,9 +38705,10 @@
       },
       "properties": {
         "FID": 91,
-        "DIGI_STATU": "51",
         "DIGI_TEAM": "2",
-        "DURATION": "679"
+        "DURATION": "679",
+        "Route_No": 51,
+        "Route_Name": "BETHEL  HOSPITAL - ADDIS KETEMA"
       }
     },
     {
@@ -39035,9 +39127,10 @@
       },
       "properties": {
         "FID": 92,
-        "DIGI_STATU": "52",
         "DIGI_TEAM": "3",
-        "DURATION": "663"
+        "DURATION": "663",
+        "Route_No": 52,
+        "Route_Name": "GERJI - ADDIS  KETEMA"
       }
     },
     {
@@ -39406,9 +39499,10 @@
       },
       "properties": {
         "FID": 93,
-        "DIGI_STATU": "53",
         "DIGI_TEAM": "4",
-        "DURATION": "735"
+        "DURATION": "735",
+        "Route_No": 53,
+        "Route_Name": "BOLE  MICHAEL - SHIRO  MEDA"
       }
     },
     {
@@ -39762,9 +39856,10 @@
       },
       "properties": {
         "FID": 94,
-        "DIGI_STATU": "54",
         "DIGI_TEAM": "2",
-        "DURATION": "314"
+        "DURATION": "314",
+        "Route_No": 54,
+        "Route_Name": "LAFTO  - LEGEHAR"
       }
     },
     {
@@ -40216,9 +40311,10 @@
       },
       "properties": {
         "FID": 95,
-        "DIGI_STATU": "59",
         "DIGI_TEAM": "5",
-        "DURATION": "2757"
+        "DURATION": "2757",
+        "Route_No": 59,
+        "Route_Name": "BETHEL HOSPITAL - MENELIK  SQUAR"
       }
     },
     {
@@ -40786,9 +40882,10 @@
       },
       "properties": {
         "FID": 96,
-        "DIGI_STATU": "60???",
         "DIGI_TEAM": "4",
-        "DURATION": "2367"
+        "DURATION": "2367",
+        "Route_No": 60,
+        "Route_Name": "DEBR ZEIT - LEGEHAR"
       }
     },
     {
@@ -41189,9 +41286,10 @@
       },
       "properties": {
         "FID": 97,
-        "DIGI_STATU": "63",
         "DIGI_TEAM": "5",
-        "DURATION": "235"
+        "DURATION": "235",
+        "Route_No": 63,
+        "Route_Name": "ADDIS KETEMA - MIKILILAND"
       }
     },
     {
@@ -41357,9 +41455,10 @@
       },
       "properties": {
         "FID": 98,
-        "DIGI_STATU": "72",
         "DIGI_TEAM": "4",
-        "DURATION": "812"
+        "DURATION": "812",
+        "Route_No": 72,
+        "Route_Name": "HANA MARIAM - SARI  ABO"
       }
     },
     {
@@ -41819,9 +41918,10 @@
       },
       "properties": {
         "FID": 99,
-        "DIGI_STATU": "80",
         "DIGI_TEAM": "3",
-        "DURATION": "163"
+        "DURATION": "163",
+        "Route_No": 80,
+        "Route_Name": "SEMEN GEBEYA  SQUAR - MEGENAGNA"
       }
     },
     {
@@ -42561,9 +42661,10 @@
       },
       "properties": {
         "FID": 100,
-        "DIGI_STATU": "81",
         "DIGI_TEAM": "2",
-        "DURATION": "386"
+        "DURATION": "386",
+        "Route_No": 81,
+        "Route_Name": "SIDIST KILO -SANSUSI"
       }
     },
     {
@@ -42919,9 +43020,10 @@
       },
       "properties": {
         "FID": 101,
-        "DIGI_STATU": "84",
         "DIGI_TEAM": "2",
-        "DURATION": "97"
+        "DURATION": "97",
+        "Route_No": 84,
+        "Route_Name": "KOLFE  EFOYTA - LEGEHAR"
       }
     },
     {
@@ -43230,9 +43332,10 @@
       },
       "properties": {
         "FID": 102,
-        "DIGI_STATU": "85",
         "DIGI_TEAM": "3",
-        "DURATION": "633"
+        "DURATION": "633",
+        "Route_No": 85,
+        "Route_Name": "ADDIS KETEMA - HOLETA"
       }
     },
     {
@@ -43566,9 +43669,10 @@
       },
       "properties": {
         "FID": 103,
-        "DIGI_STATU": "86",
         "DIGI_TEAM": "3",
-        "DURATION": "692"
+        "DURATION": "692",
+        "Route_No": 86,
+        "Route_Name": "AYER TENA - KORKI"
       }
     },
     {
@@ -44345,9 +44449,10 @@
       },
       "properties": {
         "FID": 104,
-        "DIGI_STATU": "88",
         "DIGI_TEAM": "4",
-        "DURATION": "2816"
+        "DURATION": "2816",
+        "Route_No": 88,
+        "Route_Name": "ADDIS KETEMA -CHANCHO"
       }
     },
     {
@@ -44660,9 +44765,10 @@
       },
       "properties": {
         "FID": 105,
-        "DIGI_STATU": "95",
         "DIGI_TEAM": "3",
-        "DURATION": "946"
+        "DURATION": "946",
+        "Route_No": 95,
+        "Route_Name": "ADDIS KETEMA - ADDIS  ALEM"
       }
     },
     {
@@ -45221,9 +45327,10 @@
       },
       "properties": {
         "FID": 106,
-        "DIGI_STATU": "98",
         "DIGI_TEAM": "4",
-        "DURATION": "1771"
+        "DURATION": "1771",
+        "Route_No": 98,
+        "Route_Name": "DUKEM - SARIS  ABO"
       }
     },
     {
@@ -45557,9 +45664,10 @@
       },
       "properties": {
         "FID": 107,
-        "DIGI_STATU": "107",
         "DIGI_TEAM": "3",
-        "DURATION": "1963"
+        "DURATION": "1963",
+        "Route_No": 107,
+        "Route_Name": "SARIS ABO - AKAKI  QORQORO"
       }
     },
     {
@@ -46201,9 +46309,10 @@
       },
       "properties": {
         "FID": 108,
-        "DIGI_STATU": "111",
         "DIGI_TEAM": "6",
-        "DURATION": "4263"
+        "DURATION": "4263",
+        "Route_No": 111,
+        "Route_Name": "DIRE  SOLOLIYA - PIASSA"
       }
     },
     {
@@ -46517,9 +46626,10 @@
       },
       "properties": {
         "FID": 109,
-        "DIGI_STATU": "118",
         "DIGI_TEAM": "2",
-        "DURATION": "1614"
+        "DURATION": "1614",
+        "Route_No": 118,
+        "Route_Name": "MERKATO  - TATEQ  KELLA"
       }
     },
     {
@@ -47270,9 +47380,10 @@
       },
       "properties": {
         "FID": 110,
-        "DIGI_STATU": "122",
         "DIGI_TEAM": "3",
-        "DURATION": "1539"
+        "DURATION": "1539",
+        "Route_No": 122,
+        "Route_Name": "ARAT KILO -ENTOTO MARIAM"
       }
     },
     {
@@ -47601,9 +47712,10 @@
       },
       "properties": {
         "FID": 111,
-        "DIGI_STATU": "75",
         "DIGI_TEAM": "2",
-        "DURATION": "426"
+        "DURATION": "426",
+        "Route_No": 75,
+        "Route_Name": "SIDIST KILO - QERA"
       }
     },
     {
@@ -48104,9 +48216,10 @@
       },
       "properties": {
         "FID": 112,
-        "DIGI_STATU": "93",
         "DIGI_TEAM": "3",
-        "DURATION": "247"
+        "DURATION": "247",
+        "Route_No": 93,
+        "Route_Name": "BOLE BULBULA - MEGENANGA"
       }
     },
     {
@@ -48593,9 +48706,10 @@
       },
       "properties": {
         "FID": 113,
-        "DIGI_STATU": "103",
         "DIGI_TEAM": "5",
-        "DURATION": "2995"
+        "DURATION": "2995",
+        "Route_No": 103,
+        "Route_Name": "JEMO   - PIASSA"
       }
     },
     {
@@ -48748,9 +48862,10 @@
       },
       "properties": {
         "FID": 114,
-        "DIGI_STATU": "113",
         "DIGI_TEAM": "2",
-        "DURATION": "189"
+        "DURATION": "189",
+        "Route_No": 113,
+        "Route_Name": "KALITI TOTAL  - FECHE  KOYE"
       }
     },
     {
@@ -49146,9 +49261,10 @@
       },
       "properties": {
         "FID": 115,
-        "DIGI_STATU": "5",
         "DIGI_TEAM": "2",
-        "DURATION": "189"
+        "DURATION": "189",
+        "Route_No": 5,
+        "Route_Name": "KORE MEKANISSA - MENELIK SQUAR"
       }
     },
     {
@@ -49433,9 +49549,10 @@
       },
       "properties": {
         "FID": 116,
-        "DIGI_STATU": "96",
         "DIGI_TEAM": "2",
-        "DURATION": "149"
+        "DURATION": "149",
+        "Route_No": 96,
+        "Route_Name": "MEGENAGNA - GORO SEFERA"
       }
     },
     {
@@ -49597,9 +49714,10 @@
       },
       "properties": {
         "FID": 117,
-        "DIGI_STATU": "8",
         "DIGI_TEAM": "2",
-        "DURATION": "1029"
+        "DURATION": "1029",
+        "Route_No": 8,
+        "Route_Name": "KECHENE - ADDIS  KETEMA"
       }
     },
     {
@@ -49939,9 +50057,10 @@
       },
       "properties": {
         "FID": 118,
-        "DIGI_STATU": "35",
         "DIGI_TEAM": "2",
-        "DURATION": "102"
+        "DURATION": "102",
+        "Route_No": 35,
+        "Route_Name": " LEBU MUZIQA  SEFER- ADDIS KETEMA"
       }
     },
     {
@@ -50364,9 +50483,10 @@
       },
       "properties": {
         "FID": 119,
-        "DIGI_STATU": "78",
         "DIGI_TEAM": "4",
-        "DURATION": "178"
+        "DURATION": "178",
+        "Route_No": 78,
+        "Route_Name": "MEGENAGNA - GOFA  CONDIMINIUM"
       }
     },
     {
@@ -51066,9 +51186,10 @@
       },
       "properties": {
         "FID": 120,
-        "DIGI_STATU": "108",
         "DIGI_TEAM": "4",
-        "DURATION": "142"
+        "DURATION": "142",
+        "Route_No": 108,
+        "Route_Name": "ASKO ADDISU SEFER - 18  SQ .MENELIK SQ."
       }
     },
     {
@@ -51391,9 +51512,10 @@
       },
       "properties": {
         "FID": 121,
-        "DIGI_STATU": "115",
         "DIGI_TEAM": "2",
-        "DURATION": "22"
+        "DURATION": "22",
+        "Route_No": 115,
+        "Route_Name": "LEBU MUZIQA BET - MEXICO SQUARE"
       }
     },
     {
@@ -51538,9 +51660,10 @@
       },
       "properties": {
         "FID": 122,
-        "DIGI_STATU": "116",
         "DIGI_TEAM": "3",
-        "DURATION": "2308"
+        "DURATION": "2308",
+        "Route_No": 116,
+        "Route_Name": "MEKANISSA MICHAEL SQ - JEMO  NO_ 2"
       }
     },
     {
@@ -52052,9 +52175,10 @@
       },
       "properties": {
         "FID": 123,
-        "DIGI_STATU": "120",
         "DIGI_TEAM": "2",
-        "DURATION": "1981"
+        "DURATION": "1981",
+        "Route_No": 120,
+        "Route_Name": "BURAYU KETA - TORE HILOCH"
       }
     },
     {
@@ -52334,9 +52458,10 @@
       },
       "properties": {
         "FID": 124,
-        "DIGI_STATU": "42",
         "DIGI_TEAM": "2",
-        "DURATION": "274"
+        "DURATION": "274",
+        "Route_No": 42,
+        "Route_Name": "MEGENAGNA - LEGEHAR"
       }
     }
   ]
