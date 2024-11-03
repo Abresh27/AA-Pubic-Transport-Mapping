@@ -11,45 +11,74 @@ import "leaflet.locatecontrol/dist/L.Control.Locate.min.css";
 import "leaflet.locatecontrol";
 
 export default function MainMapCopy() {
-  const mapRef = useRef(null);
-  //Use the useEffect hook to create a function to get all the bus locations and terminals from the database
-  // Fetch bus locations from the database
+  const mapRef = useRef(null); //useRef to ensure that the map is initialized only once
+  const busLayerRef = useRef(null); // Ref to store the bus locations layer
   const [busLocations, setBusLocations] = useState([]); //state to store the bus location data
-  async function fetchAllBusLocations() {
-    await fetchAllBusLocation() //Use the function created in the API to get all the bus locations
-      .then((data) => setBusLocations(data))
-      .catch((err) => console.log(err));
-  }
+  // Fetch bus terminal layer from the database
+  const [busTerminals, setBusTerminals] = useState([]); //state to store the bus location data
+  //Use effect hook to load the map
   useEffect(() => {
+    // Create the map and set its initial view
     if (!mapRef.current) {
       //Create a map and add the default created base layers to the map
-      const map = L.map("mapDiv", { zoomControl: false }).setView(
+      mapRef.current = L.map("mapDiv", { zoomControl: false }).setView(
         [8.988853, 38.782425],
         12
       );
       // Add zoom control to the map (Modifying the default zoom control properties )
-      L.control.zoom({ position: "topright" }).addTo(map);
-
-      //Create a base layers base maps
-      //Create the tile layer from open street map
-      const OSM = L.tileLayer(
-        "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-        {
-          maxZoom: 16,
-          attribution: "© OpenStreetMap",
-        }
-      ).addTo(map); // Set the default base layer;
-
-      // Create an Esri basemap layer
-      const accessToken =
-        "AAPKd1b17caf87f8487294ad231e921f3b4eczRnXS6Ms1S86_zljbXg34zqZP0KY8ZNUg3_NWxWWVYTwXlbhbGRpw1A5GsgRZuU";
-      const esriStreet = vectorBasemapLayer("arcgis/streets", {
-        token: accessToken,
-      });
-      mapRef.current = map;
+      L.control.zoom({ position: "topright" }).addTo(mapRef.current);
+      //Add and dispalay the current user location using leaflet.locatecontrol module
+      L.control
+        .locate({
+          position: "topright",
+          flyTo: true,
+          drawCircle: false,
+          showPopup: false,
+          strings: {
+            title: "",
+          },
+          locateOptions: {
+            maxZoom: 50,
+            enableHighAccuracy: true,
+          },
+        })
+        .addTo(mapRef.current);
     }
+    // Fetch bus terminal data once
+    async function getAllBusTerminals() {
+      await fetchBusTerminal() //Use the function created in the API to get all the bus terminal
+        .then((data) => setBusTerminals(data))
+        .catch((err) => console.log(err));
+    }
+    getAllBusTerminals();
+  }, []);
+
+  // Fetch bus locations every 5 seconds
+  // useEffect(() => {
+  //   async function getAllBusLocation() {
+  //     await fetchAllBusLocation()
+  //       .then((data) => setBusLocations(data))
+  //       .catch((err) => console.log(err));
+  //   }
+  //   getAllBusLocation(); // Initial load
+  //   const interval = setInterval(getAllBusLocation, 5000); // Fetch every 5 seconds
+  //   return () => clearInterval(interval);
+  // }, []);
+
+  //Use the useEffect hook to create a function to get all the bus locations and terminals from the database
+  // Add GeoJSON layers when bus locations or terminals change
+  useEffect(() => {
+    //<*****Adding layers fetched from the database (bus Terminal data)******> Using Markers>Method one(1)
+    //Option 1: Create a function to create bus terminal markers
+    // busTerminals.forEach((terminal) => {
+    //   L.marker([terminal.terminal_location.y, terminal.terminal_location.x])
+    //     .addTo(map)
+    //     .bindPopup(`Terminal ID: ${terminal.terminal_id}`);
+    // });
+
     //Option 2: Create a function to create bus terminal markers (using async await to add it into the layer control)
     //Create the icon to style the points
+
     const busTerminalIcon = L.icon({
       iconUrl: "./bus-stop-pointer-svgrepo-com.svg",
       iconSize: [40, 50],
@@ -77,6 +106,64 @@ export default function MainMapCopy() {
       }
       return terminalLayerGroup; // Return the LayerGroup
     }
+    //<*****Adding layers fetched from the database (bus location data)******>Using Geojson>Method one(2)
+    // Create GeoJSON layer for bus locations
+    const busLocationgeojson = {
+      type: "FeatureCollection",
+      //mapping the array returned from the database
+      features: busLocations.map((bus) => ({
+        type: "Feature",
+        properties: {
+          bus_id: bus.bus_id,
+          bus_provider: bus.bus_provider,
+          route_number: bus.route_number,
+          origin: bus.origin,
+          through: bus.through,
+          destination: bus.destination,
+          route_name: bus.route_name,
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [bus.bus_live_location.x, bus.bus_live_location.y],
+        },
+      })),
+    };
+
+    //Adding the geojson buses location point data
+    //Create the icon to style the bus points
+    const shegerBusIcon = L.icon({
+      iconUrl: "./sheger-bus-com.svg",
+      iconSize: [20, 50],
+    });
+    const anbesaBusIcon = L.icon({
+      iconUrl: "./anbesa-bus-com.svg",
+      iconSize: [20, 50],
+    });
+    // Remove the old bus layer if it exists
+    if (busLayerRef.current) {
+      mapRef.current.removeLayer(busLayerRef.current);
+    }
+    // Add new bus layer with updated data
+    busLayerRef.current = L.geoJSON(busLocationgeojson, {
+      pointToLayer: function (feature, latlng) {
+        // Check the bus provider and assign the appropriate icon
+        if (feature.properties.bus_provider === "Sheger") {
+          return L.marker(latlng, { icon: shegerBusIcon });
+        } else {
+          return L.marker(latlng, { icon: anbesaBusIcon });
+        }
+      },
+      onEachFeature: (feature, layer) => {
+        layer.bindPopup(
+          `<h3><center>${feature.properties.route_name}</center></h3>
+            <strong>Bus provider:</strong> ${feature.properties.bus_provider}<br>
+            <strong>Route Number:</strong> ${feature.properties.route_number}<br>
+            <strong>Origin:</strong> ${feature.properties.origin}<br>
+            <strong>Through:</strong> ${feature.properties.through}<br>
+            <strong>Destination:</strong> ${feature.properties.destination} `
+        );
+      },
+    }).addTo(mapRef.current);
 
     //<******** Adding GeoJson file from local storage in to the map - Using the imported GeoJson file (Js object)**********>Method one(1)
     //Create the icon to style the points
@@ -115,7 +202,6 @@ export default function MainMapCopy() {
         );
       }
     }
-
     //Styling the bus rout layers
     const anbesaBusRoutStyle = {
       color: "#e90a0a",
@@ -165,18 +251,35 @@ export default function MainMapCopy() {
         },
       });
 
+      //Create the overlay layers to group
+      //Create a base tile layer base maps
+      //Create the tile layer from open street map
+      const OSM = L.tileLayer(
+        "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+        {
+          // maxZoom: 16,
+          attribution: "© OpenStreetMap",
+        }
+      ).addTo(mapRef.current); // Set the default base layer;
+
+      // Create an Esri basemap layer
+      const accessToken =
+        "AAPKd1b17caf87f8487294ad231e921f3b4eczRnXS6Ms1S86_zljbXg34zqZP0KY8ZNUg3_NWxWWVYTwXlbhbGRpw1A5GsgRZuU";
+      const esriStreet = vectorBasemapLayer("arcgis/streets", {
+        token: accessToken,
+      });
       //Create the bus terminal layer using the function createBusTerminalLayer
       const busTerminalLayer = await createBusTerminalLayer(busTerminals); // Wait for the LayerGroup to be created
 
       //Create and Group the overlay layers
       const groupedOverlayLayers = {
         "Bus Routs": {
-          "Anbesa Bus Routs": anbesaBusRout.addTo(map), //Set the default Bus Routs overlay layer
+          "Anbesa Bus Routs": anbesaBusRout.addTo(mapRef.current), //Set the default Bus Routs overlay layer
           "Sheger Bus Routs": shegerBusRout,
           "Aliyance Bus Routs": aliyancBusRout,
         },
         "Bus Stops and Terminals": {
-          "Bus Terminals": busTerminalLayer.addTo(map), //Set the default Bus Stops and Terminals overlay layer
+          "Bus Terminals": busTerminalLayer.addTo(mapRef.current), //Set the default Bus Stops and Terminals overlay layer
           "Bus Stops": busStop,
         },
       };
@@ -193,124 +296,10 @@ export default function MainMapCopy() {
           collapsed: false,
           position: "topleft", //Create the options to the property of layer controller
         })
-        .addTo(map);
+        .addTo(mapRef.current);
     }
     addGeoJSONLayers();
+  }, []); //Dependency to re-render the map whenever there is a change in busLocations data
 
-    //Add and dispalay the current user location using leaflet.locatecontrol module
-    L.control
-      .locate({
-        position: "topright",
-        flyTo: true,
-        drawCircle: false,
-        showPopup: false,
-        strings: {
-          title: "",
-        },
-        locateOptions: {
-          maxZoom: 15,
-          enableHighAccuracy: true,
-        },
-      })
-      .addTo(map);
-  }, []);
-
-  // Fetch bus terminal layer from the database
-  const [busTerminals, setBusTerminals] = useState([]); //state to store the bus location data
-  useEffect(() => {
-    async function getBusTerminals() {
-      await fetchBusTerminal() //Use the function created in the API to get all the bus locations
-        .then((data) => setBusTerminals(data))
-        .catch((err) => console.log(err));
-    }
-    getBusTerminals();
-
-    // Fetch initial bus locations
-    fetchAllBusLocations();
-    // Set up an interval to update bus locations every 10 seconds (adjust as needed)
-    const intervalId = setInterval(() => {
-      fetchAllBusLocations();
-    }, 10000);
-    //Cleanup function from the useEffect hook when the component unmounts to avoid memory leaks.
-    return () => {
-      map.remove();
-      // Cleanup interval on component unmount
-      clearInterval(intervalId);
-    };
-  }, []);
-
-  //Use effect hook to load the map
-  useEffect(() => {
-    if (mapRef.current && busLocations.length > 0 && busTerminals.length > 0) {
-      //<*****Adding layers fetched from the database (bus Terminal data)******> Using Markers>Method one(1)
-      //Option 1: Create a function to create bus terminal markers
-      // busTerminals.forEach((terminal) => {
-      //   L.marker([terminal.terminal_location.y, terminal.terminal_location.x])
-      //     .addTo(map)
-      //     .bindPopup(`Terminal ID: ${terminal.terminal_id}`);
-      // });
-
-      //<*****Adding layers fetched from the database (bus location data)******>Using Geojson>Method one(2)
-      // Remove existing layers before adding new ones
-      // mapRef.current.eachLayer((layer) => {
-      //   if (layer.options && layer.options.pane === "markerPane") {
-      //     mapRef.current.removeLayer(layer);
-      //   }
-      // });
-      const geojsonData = {
-        type: "FeatureCollection",
-        //mapping the array returned from the database
-        features: busLocations.map((bus) => ({
-          type: "Feature",
-          properties: {
-            bus_id: bus.bus_id,
-            bus_provider: bus.bus_provider,
-            route_number: bus.route_number,
-            origin: bus.origin,
-            through: bus.through,
-            destination: bus.destination,
-            route_name: bus.route_name,
-          },
-          geometry: {
-            type: "Point",
-            coordinates: [bus.bus_live_location.x, bus.bus_live_location.y],
-          },
-        })),
-      };
-
-      //Adding the geojson buses point data
-      //Create the icon to style the bus points
-      const shegerBusIcon = L.icon({
-        iconUrl: "./sheger-bus-com.svg",
-        iconSize: [20, 50],
-      });
-      const anbesaBusIcon = L.icon({
-        iconUrl: "./anbesa-bus-com.svg",
-        iconSize: [20, 50],
-      });
-      L.geoJSON(geojsonData, {
-        style: shegerBusIcon || anbesaBusIcon,
-        pointToLayer: function (feature, latlng) {
-          // Check the bus provider and assign the appropriate icon
-          if (feature.properties.bus_provider == "Sheger") {
-            return L.marker(latlng, { icon: shegerBusIcon });
-          } else {
-            return L.marker(latlng, { icon: anbesaBusIcon });
-          }
-        },
-        onEachFeature: (feature, layer) => {
-          layer.bindPopup(
-            `<h3><center>${feature.properties.route_name}</center></h3>
-            <strong>Bus provider:</strong> ${feature.properties.bus_provider}<br>
-            <strong>Route Number:</strong> ${feature.properties.route_number}<br>
-            <strong>Origin:</strong> ${feature.properties.origin}<br>
-            <strong>Through:</strong> ${feature.properties.through}<br>
-            <strong>Destination:</strong> ${feature.properties.destination} `
-          );
-        },
-      }).addTo(mapRef.current);
-    }
-  }, [busLocations]); //Dependency to re-render the map whenever there is a change in busLocations data
-
-  return <div id="mapDiv" ref={mapRef}></div>;
+  return <div id="mapDiv"></div>;
 }
