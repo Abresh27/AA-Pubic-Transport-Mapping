@@ -1,21 +1,29 @@
 import React, { useEffect, useRef, useState } from "react";
-import L from "leaflet";
+import L, { map } from "leaflet";
 import "leaflet/dist/leaflet.css";
 import "./index.css";
+//importing the leaflet plugins
 import "leaflet-groupedlayercontrol/dist/leaflet.groupedlayercontrol.min.css";
 import "leaflet-groupedlayercontrol";
+import "leaflet.locatecontrol/dist/L.Control.Locate.min.css";
+import "leaflet.locatecontrol";
+import "leaflet.pinsearch/src/Leaflet.PinSearch.css";
+import "leaflet.pinsearch";
+import "leaflet-search/dist/leaflet-search.min.css";
+import "leaflet-search";
+//importing the layers
 import { vectorBasemapLayer } from "esri-leaflet-vector";
 import { busStops } from "../../public/Bus_Stops";
 import { fetchAllBusLocation, fetchBusTerminal } from "../api/api.location";
-import "leaflet.locatecontrol/dist/L.Control.Locate.min.css";
-import "leaflet.locatecontrol";
 
-export default function MainMap() {
+export default function MainMapcopy() {
   const mapRef = useRef(null); //Ref to hold the map
   const busLayerRef = useRef(null); // Ref to store the bus locations layer
   const [busLocations, setBusLocations] = useState([]); //state to store the bus location data
   const [busTerminals, setBusTerminals] = useState([]); //state to store the bus terminal data
   const layerControlRef = useRef(null); // Ref to hold the layer control
+  const busTerminalLayerGroup = useRef(L.layerGroup()); // Ref to hold the bus terminal LayerGroup
+  const searchControlRef = useRef(null); // Ref to hold the search control
 
   //useEffect hook to load the map elements when the component is mounted
   useEffect(() => {
@@ -54,6 +62,7 @@ export default function MainMap() {
       getAllBusTerminals();
     }
   }, []);
+
   //useEffect hook to create and fetch all required layers and add the layes to the layer control
   useEffect(() => {
     //Function to get all the bus terminals from the database
@@ -72,7 +81,8 @@ export default function MainMap() {
       iconSize: [40, 50],
     });
     async function createBusTerminalLayer(layers) {
-      const terminalLayerGroup = L.layerGroup(); // Create a LayerGroup to hold the markers
+      const terminalLayerGroup = busTerminalLayerGroup.current; // Use the LayerGroup ref
+      terminalLayerGroup.clearLayers(); // Clear existing layers
       try {
         layers.forEach((terminal) => {
           const marker = L.marker(
@@ -84,6 +94,7 @@ export default function MainMap() {
             `<center><h3 style="display: inline;">Terminal Name:</h3> <strong>${terminal.terminal_name}</strong></center><br>
               <h3 style="display: inline;">Destinations:</h3><br> <strong>${terminal.route_details}</strong>`
           );
+          marker.options.title = terminal.terminal_name; // Set the title for search
           terminalLayerGroup.addLayer(marker); // Add each marker to the LayerGroup
         });
       } catch (error) {
@@ -162,19 +173,6 @@ export default function MainMap() {
           }
         },
       });
-      const aliyancBusRout = await fetchGeoJSON("./AlianceBusRoutes.json", {
-        style: {
-          color: "#fff933",
-        },
-        onEachFeature: function (feature, layer) {
-          //Function to bind the popup
-          if (feature.properties && feature.properties.BEGIN) {
-            layer.bindPopup(
-              `<strong>Aliance Bus Route Number:</strong> ${feature.properties.BEGIN}`
-            );
-          }
-        },
-      });
       //Create the bus terminal overlay layer using the function createBusTerminalLayer
       const busTerminalLayer = await createBusTerminalLayer(busTerminals); // Wait for the LayerGroup to be created
       //Create the base layers
@@ -185,31 +183,34 @@ export default function MainMap() {
           // maxZoom: 16,
           attribution: "© OpenStreetMap",
         }
-      ).addTo(mapRef.current); // Set the default base layer;
+      ); // Set the default base layer;
 
       //Create an Esri basemap layer
       const accessToken =
         "AAPKd1b17caf87f8487294ad231e921f3b4eczRnXS6Ms1S86_zljbXg34zqZP0KY8ZNUg3_NWxWWVYTwXlbhbGRpw1A5GsgRZuU";
-      const esriStreet = vectorBasemapLayer("arcgis/streets", {
+      const esriNavigation = vectorBasemapLayer("arcgis/navigation", {
         token: accessToken,
-      });
+        attribution:
+          'Tiles &copy; <a href="https://www.esri.com/">Esri</a> | Data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>',
+      }); // Set the default base layer
 
       //Group the overlay layers
       const groupedOverlayLayers = {
         "Bus Routs": {
-          "Anbesa Bus Routs": anbesaBusRout.addTo(mapRef.current), //Set the default Bus Routs overlay layer
+          "Anbesa Bus Routs": anbesaBusRout, //Set the default Bus Routs overlay layer
           "Sheger Bus Routs": shegerBusRout,
-          "Aliyance Bus Routs": aliyancBusRout,
         },
         "Bus Stops and Terminals": {
-          "Bus Terminals": busTerminalLayer.addTo(mapRef.current), //Set the default Bus Stops and Terminals overlay layer
-          "Bus Stops": busStop,
+          '<img src="./bus-stop-pointer-svgrepo-com.svg" style="width: 20px; height: 20px; vertical-align: middle;" /> Bus Terminals':
+            busTerminalLayer.addTo(mapRef.current), //Set the default Bus Stops and Terminals overlay layer
+          '<img src="./bus-stop-svgrepo-com-bw.svg" style="width: 20px; height: 20px; vertical-align: middle;" /> Bus Stops':
+            busStop,
         },
       };
       //Group the base layer
       const baseLayers = {
+        "Esri Navigation": esriNavigation.addTo(mapRef.current), // Add the Esri basemap layer
         "Open Street Map": OSM, // Set the default base layer
-        "Esri Street": esriStreet,
       };
       return { baseLayers, groupedOverlayLayers };
     }
@@ -227,7 +228,26 @@ export default function MainMap() {
       }
     }
     addLayerControl(); // Initialize layer control once
+
+    //Function to add the search control to the map
+    async function addSearchControl() {
+      // Add the search control only if it hasn't been added yet
+      if (!searchControlRef.current) {
+        searchControlRef.current = L.control
+          .search({
+            layer: busTerminalLayerGroup.current,
+            propertyName: "title", // Search by the title property set on the marker
+            initial: false,
+            zoom: 18,
+            marker: false,
+          })
+          .addTo(mapRef.current);
+      }
+    }
+    // Call the function to add the search control
+    addSearchControl();
   }, [busTerminals]);
+
   // useEffect hook to fetch bus locations every 5 seconds from the database
   useEffect(() => {
     async function getAllBusLocation() {
@@ -236,9 +256,10 @@ export default function MainMap() {
         .catch((err) => console.log(err));
     }
     getAllBusLocation(); // Initial load
-    const interval = setInterval(getAllBusLocation, 5000); // Fetch every 5 seconds
+    const interval = setInterval(getAllBusLocation, 30000); // Fetch every 30 seconds
     return () => clearInterval(interval);
   }, []);
+
   //useEffect hook to add the update bus location every five seconds
   useEffect(() => {
     //<*****Adding layers fetched from the database (bus location data)******>Using Geojson>Method one(2)
@@ -300,5 +321,6 @@ export default function MainMap() {
       },
     }).addTo(mapRef.current);
   }, [busLocations]); //Dependency to re-render the bus location layer every five seconds
+
   return <div id="mapDiv"></div>;
 }
