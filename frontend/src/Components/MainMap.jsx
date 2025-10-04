@@ -240,6 +240,8 @@ export default function MainMapcopy() {
             initial: false,
             zoom: 18,
             marker: false,
+            position: "topright",
+            textPlaceholder: "Search Bus Terminal...",
           })
           .addTo(mapRef.current);
       }
