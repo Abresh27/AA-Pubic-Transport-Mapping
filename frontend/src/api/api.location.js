@@ -1,13 +1,13 @@
 import axios from "axios";
 
-// Create Base URL for the backend serverl localy using axios
+// Create Base URL for the backend server localy using axios
 export const axiosInstance = axios.create(
   // URL for the back-end server is running locally
   {
-    baseURL: "http://localhost:3000",
+    // baseURL: "http://localhost:3000",
 
     // URL for the back-end server is running on the render.com web-server
-    // baseURL: "https://evangadi-forum-npr8.onrender.com",
+    baseURL: "https://aa-pubic-transport-mapping.onrender.com",
   }
 );
 
